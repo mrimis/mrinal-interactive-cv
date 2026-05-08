@@ -1,5 +1,7 @@
 # Mrinal Mishra Interactive CV
 
+Live site: https://mrimis.github.io/mrinal-interactive-cv/
+
 Open `index.html` in a browser to view the Netflix-inspired interactive CV.
 
 The site is self-contained except for external profile links. It includes local image assets, section tabs, CV cards, card detail panels, workflow-style figures, and local links to the PDF and ATS DOCX files in `downloads/`.
