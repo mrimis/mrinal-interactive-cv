@@ -326,6 +326,28 @@ const cards = {
     ],
     links: [["Repository", "https://github.com/mrimis/File-handling-and-Plotting-Functions"]],
   },
+  githubBioportalPortfolio: {
+    kicker: "Sanitized GitHub portfolio",
+    title: "Perera Lab BioPortal Portfolio Snapshot",
+    line: "Source-available review copy",
+    meta: "Public repository | Django REST | React | Celery | Docker | genomics workflows",
+    image: assets.platform,
+    summary:
+      "A sanitized public snapshot of the lab-group bioinformatics web platform, shared so recruiters can review the application architecture, backend/frontend implementation, and genomics workflow design without exposing private lab data or deployment material.",
+    disclaimer:
+      "Disclaimer: this repository is a portfolio-review snapshot only. It is not a production deployment, not an official Northwestern University release or endorsement, and it grants no open-source reuse license.",
+    bullets: [
+      "Shows Django REST Framework, React/Vite, Celery/Redis, PostgreSQL, Docker Compose, Nginx, authentication flows, chunked uploads, audit logging, and background job orchestration.",
+      "Represents workflow surfaces for PLINK 1.9/2.0, GCTA, Beagle, FLARE, GWAS/TWAS, variant-calling, RNA-seq, and QC-oriented genomics analyses.",
+      "Excludes research datasets, user uploads, SQLite databases, secrets, deployment credentials, private outputs, local validation artifacts, and third-party tool binaries.",
+    ],
+    figure: [
+      ["Visible", "Architecture, source code, tests, workflow definitions"],
+      ["Removed", "Data, secrets, uploads, outputs, binaries"],
+      ["Purpose", "Recruiter review of engineering work"],
+    ],
+    links: [["Sanitized Repository", "https://github.com/mrimis/perera-bioportal-portfolio"]],
+  },
   bioportal: {
     kicker: "Active build",
     title: "Perera Lab BioPortal",
@@ -582,7 +604,7 @@ const rowsByTab = {
     ],
     rows: [
       ["Active Builds", ["bioportal", "alaGem", "lineageAi"]],
-      ["Public Repositories", ["githubImage", "githubVcf", "githubQsar", "githubGenomeRead", "githubDxy", "githubPlot"]],
+      ["Public Repositories", ["githubBioportalPortfolio", "githubImage", "githubVcf", "githubQsar", "githubGenomeRead", "githubDxy", "githubPlot"]],
       ["Project-Relevant Skills", ["programming", "ml", "genome", "population"]],
     ],
   },
@@ -616,6 +638,7 @@ const els = {
   modalTitle: document.querySelector("[data-modal-title]"),
   modalMeta: document.querySelector("[data-modal-meta]"),
   modalSummary: document.querySelector("[data-modal-summary]"),
+  modalDisclaimer: document.querySelector("[data-modal-disclaimer]"),
   modalFigure: document.querySelector("[data-modal-figure]"),
   modalList: document.querySelector("[data-modal-list]"),
   modalLinks: document.querySelector("[data-modal-links]"),
@@ -707,6 +730,8 @@ function openModal(card) {
   els.modalTitle.textContent = card.title;
   els.modalMeta.textContent = card.meta || card.line;
   els.modalSummary.textContent = card.summary;
+  els.modalDisclaimer.textContent = card.disclaimer || "";
+  els.modalDisclaimer.hidden = !card.disclaimer;
   const figure = card.figure || [
     ["Focus", card.kicker],
     ["Signal", card.line],
