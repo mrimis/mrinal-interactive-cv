@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mrinal Mishra GitHub | Bioinformatics Code Portfolio</title>
+    <meta name="description" content="GitHub code portfolio for Mrinal Mishra, Ph.D., featuring bioinformatics, computational genomics, machine learning, web applications, and reproducible research software.">
+    <link rel="canonical" href="https://mrimis.github.io/mrinal-interactive-cv/github.html">
+    <meta name="theme-color" content="#0d1117">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mrinal Mishra GitHub Portfolio">
+    <meta property="og:url" content="https://mrimis.github.io/mrinal-interactive-cv/github.html">
+    <meta property="og:title" content="Mrinal Mishra GitHub | Bioinformatics Code Portfolio">
+    <meta property="og:description" content="Public repositories in bioinformatics, computational genomics, machine learning, web applications, and reproducible research software.">
+    <meta property="og:image" content="https://mrimis.github.io/mrinal-interactive-cv/assets/github-profile-thumbnail.png?v=20260508-github">
+    <meta property="og:image:secure_url" content="https://mrimis.github.io/mrinal-interactive-cv/assets/github-profile-thumbnail.png?v=20260508-github">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="GitHub code portfolio thumbnail for Mrinal Mishra, Ph.D.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mrinal Mishra GitHub | Bioinformatics Code Portfolio">
+    <meta name="twitter:description" content="Bioinformatics, computational genomics, machine learning, web applications, and reproducible research software.">
+    <meta name="twitter:image" content="https://mrimis.github.io/mrinal-interactive-cv/assets/github-profile-thumbnail.png?v=20260508-github">
+    <meta name="twitter:image:alt" content="GitHub code portfolio thumbnail for Mrinal Mishra, Ph.D.">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0d1117;
+        --panel: #161b22;
+        --text: #f0f6fc;
+        --muted: #c9d1d9;
+        --dim: #8b949e;
+        --green: #238636;
+        --blue: #58a6ff;
+        --border: rgba(240, 246, 252, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 28px;
+        background:
+          linear-gradient(90deg, rgba(1, 4, 9, 0.94), rgba(13, 17, 23, 0.72)),
+          url("assets/card-code.jpg") center / cover no-repeat,
+          var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(1040px, 100%);
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+        gap: 22px;
+        align-items: stretch;
+      }
+
+      .hero,
+      .panel {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: rgba(13, 17, 23, 0.88);
+        box-shadow: 0 24px 54px rgba(0, 0, 0, 0.42);
+      }
+
+      .hero {
+        padding: clamp(24px, 5vw, 52px);
+      }
+
+      .profile {
+        width: 124px;
+        height: 124px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--text);
+        box-shadow: 0 0 0 5px rgba(35, 134, 54, 0.88);
+      }
+
+      h1 {
+        margin: 26px 0 0;
+        max-width: 10ch;
+        font-size: clamp(3rem, 8vw, 5.8rem);
+        line-height: 0.92;
+        letter-spacing: 0;
+      }
+
+      .handle {
+        margin: 16px 0 0;
+        color: #7ee787;
+        font-size: clamp(1.35rem, 3vw, 2rem);
+        font-weight: 800;
+      }
+
+      .summary {
+        max-width: 620px;
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.55;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        border-radius: 6px;
+        padding: 0 16px;
+        background: rgba(240, 246, 252, 0.1);
+        font-weight: 850;
+      }
+
+      .button.primary {
+        background: var(--green);
+      }
+
+      .panel {
+        padding: 24px;
+      }
+
+      .panel h2 {
+        margin: 0;
+        font-size: 1.45rem;
+      }
+
+      .repo-list {
+        display: grid;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .repo {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 14px;
+        background: rgba(240, 246, 252, 0.06);
+      }
+
+      .repo strong {
+        display: block;
+        color: var(--blue);
+      }
+
+      .repo span {
+        display: block;
+        margin-top: 5px;
+        color: var(--dim);
+        font-size: 0.92rem;
+        line-height: 1.35;
+      }
+
+      @media (max-width: 820px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="github-title">
+        <img class="profile" src="assets/mrinal-avatar.jpg" alt="Mrinal Mishra">
+        <h1 id="github-title">GitHub Code Portfolio</h1>
+        <p class="handle">mrimis | Mrinal Mishra, Ph.D.</p>
+        <p class="summary">
+          Public repositories and portfolio projects in bioinformatics, computational genomics,
+          machine learning, web applications, and reproducible research software.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/mrimis">Open GitHub Profile</a>
+          <a class="button" href="https://mrimis.github.io/mrinal-interactive-cv/#projects">Open Interactive CV</a>
+        </div>
+      </section>
+
+      <aside class="panel" aria-label="Featured repositories">
+        <h2>Featured Repositories</h2>
+        <div class="repo-list">
+          <a class="repo" href="https://github.com/mrimis/perera-bioportal-portfolio">
+            <strong>perera-bioportal-portfolio</strong>
+            <span>Sanitized portfolio snapshot of a full-stack bioinformatics web platform.</span>
+          </a>
+          <a class="repo" href="https://github.com/mrimis/VCF-file-filtering">
+            <strong>VCF-file-filtering</strong>
+            <span>Python utility aligned with variant filtering and sequencing workflows.</span>
+          </a>
+          <a class="repo" href="https://github.com/mrimis/QSAR_prediction_model">
+            <strong>QSAR_prediction_model</strong>
+            <span>Notebook-based biological prediction modeling example.</span>
+          </a>
+          <a class="repo" href="https://github.com/mrimis/Image-segmentation-and-feature-extraction-">
+            <strong>Image segmentation and feature extraction</strong>
+            <span>R scripts for cell image segmentation and morphology feature extraction.</span>
+          </a>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>
