@@ -1,6 +1,6 @@
 # Mrinal Mishra Interactive CV
 
-Live site: https://mrimis.github.io/mrinal-interactive-cv/
+Live site: [https://mrimis.github.io/mrinal-interactive-cv/](https://mrimis.github.io/mrinal-interactive-cv/?v=20260508-bioportal#projects)
 
 Open `index.html` in a browser to view the Netflix-inspired interactive CV.
 
