@@ -54,6 +54,7 @@
     { id: "pub-2018", kind: "pub", x: 2018.5, label: "Heredity", t: "g", ref: "pub-2018" },
     { id: "pub-2019", kind: "pub", x: 2019.5, label: "Microbial Ecology", t: "g", ref: "pub-2019" },
     { id: "pub-2021", kind: "pub", x: 2021.5, label: "Molecular Ecology", t: "g", ref: "pub-2021" },
+    { id: "pub-2024", kind: "pub", x: 2024.5, label: "Pac. Symp. Biocomput.", t: "g m", ref: "pub-2024" },
     { id: "pub-2023a", kind: "pub", x: 2023.28, label: "AJHG", t: "g", ref: "pub-2023a" },
     { id: "pub-2023b", kind: "pub", x: 2023.72, label: "Clin. Pharmacol. Ther.", t: "g", ref: "pub-2023b" },
 
