@@ -54,6 +54,7 @@
     { id: "pub-2018", kind: "pub", x: 2018.5, label: "Heredity", t: "g", ref: "pub-2018" },
     { id: "pub-2019", kind: "pub", x: 2019.5, label: "Microbial Ecology", t: "g", ref: "pub-2019" },
     { id: "pub-2021", kind: "pub", x: 2021.5, label: "Molecular Ecology", t: "g", ref: "pub-2021" },
+    { id: "pub-2025", kind: "pub", x: 2025.07, label: "bioRxiv", t: "g", ref: "pub-2025" },
     { id: "pub-2024", kind: "pub", x: 2024.5, label: "Pac. Symp. Biocomput.", t: "g m", ref: "pub-2024" },
     { id: "pub-2023a", kind: "pub", x: 2023.28, label: "AJHG", t: "g", ref: "pub-2023a" },
     { id: "pub-2023b", kind: "pub", x: 2023.72, label: "Clin. Pharmacol. Ther.", t: "g", ref: "pub-2023b" },
@@ -182,13 +183,16 @@
 
     // Publications as lollipops
     out += `<line class="t-grid" x1="0" x2="${W}" y1="${L.pubBase}" y2="${L.pubBase}" style="stroke:rgba(255,255,255,.22)"/>`;
-    FEATURES.filter((f) => f.kind === "pub").forEach((f) => {
+    const pubs = FEATURES.filter((f) => f.kind === "pub").sort((a, b) => a.x - b.x);
+    pubs.forEach((f, i) => {
       const x = X(f.x);
       let inner = `<line x1="${x}" x2="${x}" y1="${L.pubTop + 7}" y2="${L.pubBase}" stroke="#7d95ff" stroke-width="2"/>`;
       inner += `<circle class="c-g" cx="${x}" cy="${L.pubTop}" r="7.5"/>`;
       inner += `<circle class="f-ring" cx="${x}" cy="${L.pubTop}" r="11.5"/>`;
       inner += `<rect x="${x - 13}" y="${L.pubTop - 13}" width="26" height="${L.pubBase - L.pubTop + 14}" fill="transparent"/>`;
-      if (ppy > 105) inner += `<text class="f-lab out" x="${x + 13}" y="${L.pubTop + 4}">${esc(f.label)}</text>`;
+      // A journal label is drawn only when it fits before the next lollipop.
+      const room = i + 1 < pubs.length ? (pubs[i + 1].x - f.x) * ppy - 30 : Infinity;
+      if (ppy > 105 && f.label.length * 6.8 < room) inner += `<text class="f-lab out" x="${x + 13}" y="${L.pubTop + 4}">${esc(f.label)}</text>`;
       out += wrap(f, inner);
     });
 
